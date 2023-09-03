@@ -86,3 +86,20 @@ kubectl delete -f nginx-service.yaml
 kubectl delete -f nginx-deployment.yaml
 kubectl delete deployment nginx-depl
 kubectl delete deployment --all
+
+
+================================================================================================================
+Namespaces:
+kubectl get namespace
+NAME              STATUS   AGE
+default           Active   3h51m (using for resources)
+kube-node-lease   Active   3h51m (heartbeats of nodes)
+kube-public       Active   3h51m (public data - kubectl cluster-info)
+kube-system       Active   3h51m (Dont touch)
+
+kubectl create namespace my-namespace
+(also canbe created with config file)
+
+Why do we need namespace?
+ - grouping (refer pictures)
+ - multiple teams 

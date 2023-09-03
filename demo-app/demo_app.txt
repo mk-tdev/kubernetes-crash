@@ -1,0 +1,18 @@
+https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/demo-kubernetes-components
+
+kubectl get all
+
+mk@Muthus-MacBook-Pro kubernetes-crash % kubectl get all
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   146m
+
+create a mongo db deployment
+
+kubectl apply -f mongo-secret.yaml 
+kubectl get secret
+kubectl apply -f mongo.yaml
+kubectl describe service mongodb-service
+kubectl get pod -o wide
+
+to access service public:
+minikube service mongo-express-service
