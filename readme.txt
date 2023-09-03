@@ -67,3 +67,22 @@ Basic kubectl Commands
  kubectl logs mongo-depl-79585f75cf-s44rf
  kubectl exec -it mongo-depl-79585f75cf-s44rf -- bin/bash [interactive terminal]
  kubectl delete deployment mongo-depl
+ kubectl apply -f config-file.yaml  [later]
+
+================================================================================================================
+
+Configuration file:
+
+metadata
+spec
+status [auto]
+
+kubectl get service
+kubectl describe service nginx-service
+kubectl get pod -o wide
+kubectl get deployment nginx-deployment -o yaml 
+kubectl get deployment nginx-deployment -o yaml > nginx-deployment-result.yaml
+kubectl delete -f nginx-service.yaml 
+kubectl delete -f nginx-deployment.yaml
+kubectl delete deployment nginx-depl
+kubectl delete deployment --all
