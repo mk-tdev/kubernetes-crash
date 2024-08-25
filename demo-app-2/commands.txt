@@ -1,0 +1,13 @@
+
+k get namespaces
+k apply -f .\demo-namespace.yaml
+k config set-context --current --namespace=demo2
+k get pods
+k apply -f .\mongo-config.yaml
+k apply -f .\mongo-secret.yaml
+k apply -f .\mongo.yaml
+k apply -f .\node-app.yaml
+
+k get all
+minikube ip
+k get node -o wide
